@@ -1,6 +1,7 @@
 #!/bin/bash
 
 NEW="$(pwd)"
+BRANCH="$1"
 PROJECT1="/home/vagrant/code/project1"
 PROJECT2="/home/vagrant/code/project2"
 PROJECT3="/home/vagrant/code/project3"
@@ -58,7 +59,7 @@ echo "Choose project main directory"
 
 new(){
 sudo lmm merge backup
-git checkout "$1"
+git checkout $BRANCH
 #git pull
 composer clearcache;
 composer install;
@@ -70,7 +71,7 @@ sudo service nginx restart;
 
 old(){
 sudo lmm merge backup
-git checkout "$1"
+git checkout $BRANCH
 git fetch origin;
 composer clearcache;
 composer install;
