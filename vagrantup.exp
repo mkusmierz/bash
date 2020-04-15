@@ -1,0 +1,9 @@
+#!/usr/bin/expect
+set home "/Users/user"
+set timeout 60
+
+spawn bash $home/vagrantup.sh
+expect "Password:"
+send "mypassword";
+
+interact
