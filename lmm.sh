@@ -3,12 +3,12 @@
 BRANCH="$1"
 
 lmm(){
-sudo lmm status
-sudo lmm checkout master
-sudo lmm delete $BRANCH
-sudo lmm branch $BRANCH
-sudo lmm checkout $BRANCH
-sudo lmm status
+lmm status
+lmm checkout master
+lmm delete $BRANCH
+lmm branch $BRANCH
+lmm checkout $BRANCH
+lmm status
 }
 
 lmm "$1"
